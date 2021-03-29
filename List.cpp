@@ -79,17 +79,24 @@ int List::removeItem(int itm) {
 	return tmp_indx;
 }
 
-List List::concat(List& list) {
-	List resultList;
-	resultList.size = size + list.size;
-	resultList.itemCount = itemCount + list.itemCount;
-	for (int i = 0; i < itemCount; i++) {
-		resultList.items[i] = items[i];
+void List::concat(List& list) {
+
+	size += list.size;
+	itemCount += list.itemCount;
+	
+	int* newItems = new int[size];
+
+	for (int i = 0; i < itemCount-list.itemCount; i++) {
+		newItems[i] = items[i];
 	}
-	for (int i = itemCount; i < resultList.itemCount; i++) {
-		resultList.items[i] = list.items[i - itemCount];
+	
+	for (int i = itemCount - list.itemCount; i < itemCount; i++) {
+		newItems[i] = list.items[i - (itemCount - list.itemCount)];
 	}
-	return resultList;
+
+	delete[] items;
+
+	items = newItems;
 }
 
 void List::print() {

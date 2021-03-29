@@ -14,7 +14,7 @@ public:
 	void insertItem(int index, int itm);
 	int removeAt(int index);
 	int removeItem(int itm);
-	List concat(List& list);
+	void concat(List& list);
 	void print();
 };
 
