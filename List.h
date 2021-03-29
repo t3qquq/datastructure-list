@@ -1,7 +1,13 @@
 #pragma once
+#include <iostream>
+#include <string>
+
+using namespace std;
+
 class List
 {
 private:
+	string name;
 	int* items;
 	int itemCount;
 	int size;
@@ -16,5 +22,6 @@ public:
 	int removeItem(int itm);
 	List concat(List& list);
 	void print();
+	void setName();
 };
 

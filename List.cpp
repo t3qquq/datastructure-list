@@ -1,5 +1,6 @@
 #include "List.h"
 #include <iostream>
+#include <string>
 using namespace std;
 
 List::List() {
@@ -95,4 +96,8 @@ List List::concat(List& list) {
 void List::print() {
 	for (int i = 0; i < itemCount; i++)
 		cout << items[i]<<" ";
+}
+
+void List::setName() {
+	cin >> name;
 }
