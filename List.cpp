@@ -101,5 +101,5 @@ void List::concat(List& list) {
 
 void List::print() {
 	for (int i = 0; i < itemCount; i++)
-		cout << items[i]<<" ";
+		cout << getItem(i)<<" ";
 }
