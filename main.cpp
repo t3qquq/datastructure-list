@@ -82,10 +82,10 @@ int main() {
 	listA.concat(listB);
 	listA.print();
 
-	cout << "olistC 작성" << endl;							//Olist Test
+	cout << endl << endl << "olistC 작성" << endl;							//Olist Test
 
 	for (int i = 0; i < 20; i++) {
-		cout << "ListC[" << i << "]: ";
+		cout << "olistC[" << i << "]: ";
 		cin >> INPUT;
 		olistC.addItem(INPUT);
 	}
